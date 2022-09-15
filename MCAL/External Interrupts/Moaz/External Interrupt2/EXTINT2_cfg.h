@@ -1,0 +1,13 @@
+
+#ifndef EXTINT2_CFG_H
+#define EXTINT2_CFG_H
+
+/*
+FALLING EDGE
+RISING EDGE
+*/
+
+#define EXTINT2_SENSE_MODE	LOW_LEVEL
+
+
+#endif
