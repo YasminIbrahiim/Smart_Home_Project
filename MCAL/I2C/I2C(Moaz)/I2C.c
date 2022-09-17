@@ -157,5 +157,5 @@ void I2C_u8SlaveReceive(uint8 *pu8DataCpy , uint8 u8ArraySizeCpy)
 		while(!GET_BIT(TWCR,7));
 	}
 	
-	
+	SET_BIT(TWCR,7);
 }
