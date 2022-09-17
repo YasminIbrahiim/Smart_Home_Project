@@ -65,9 +65,6 @@ void I2C_voidInit(void)
 	SET_BIT(TWCR,2); // Enable Bit
 
 
-
-
-
 }
 void I2C_voidMasterTransmit(uint8 u8SlaveAddressCpy, uint8 * pu8DataCpy, uint8 u8DataSizeCpy)
 {
@@ -100,6 +97,7 @@ void I2C_voidMasterTransmit(uint8 u8SlaveAddressCpy, uint8 * pu8DataCpy, uint8 u
 			{
 				TWDR = pu8DataCpy[u8CntrLoc];
 				TWCR = MASTER_SEND_DATA;
+				SET_BIT(TWCR,7);
 				while(!GET_BIT(TWCR,7));
 				if(TWSR == MASTER_DATA_TRANSMITTED_ACK_RECEIVED)
 				{
@@ -138,17 +136,26 @@ void I2C_voidMasterTransmit(uint8 u8SlaveAddressCpy, uint8 * pu8DataCpy, uint8 u
 
 
 }
-uint8 I2C_u8SlaveReceive(void)
+void I2C_u8SlaveReceive(uint8 *pu8DataCpy , uint8 u8ArraySizeCpy)
 {
-	uint8 u8ReturnLoc;
-	SET_BIT(TWCR,2);
+	uint8 u8CtrLOC;
+	//SET_BIT(TWCR,2);
 	CLR_BIT(TWCR,4);
-	CLR_BIT(TWCR,5);
-	SET_BIT(TWCR,6);
+	CLR_BIT(TWCR,5);  
+	SET_BIT(TWCR,6); //enable ack
+	SET_BIT(TWCR,7); //clear interrupt flag
+	
+	while(!GET_BIT(TWCR,7)); 
 	SET_BIT(TWCR,7);
+	
 	while(!GET_BIT(TWCR,7));
-	SET_BIT(TWCR,7);
-	while(!GET_BIT(TWCR,7));
-	u8ReturnLoc = TWDR;
-	return u8ReturnLoc;
+	
+	for(u8CtrLOC = 0 ; u8CtrLOC < u8ArraySizeCpy ; u8CtrLOC++)
+	{
+		pu8DataCpy[u8CtrLOC] = TWDR;
+		SET_BIT(TWCR,7);
+		while(!GET_BIT(TWCR,7));
+	}
+	
+	
 }
