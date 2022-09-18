@@ -63,99 +63,149 @@ void I2C_voidInit(void)
 
 	}
 	SET_BIT(TWCR,2); // Enable Bit
+	SET_BIT(TWCR,6); // TWI Enable ACK (To ACK if SLA + R/W Received)
 
 
 }
+
 void I2C_voidMasterTransmit(uint8 u8SlaveAddressCpy, uint8 * pu8DataCpy, uint8 u8DataSizeCpy)
 {
 	uint8 u8CntrLoc;
-	if(pu8DataCpy != NULL_PTR)
+	uint8 u8CurrentStatus = 0;
+	TWI_voidStart();
+	u8CurrentStatus = TWI_u8Get_Status();
 	{
-		/*Step 1 Send Start Condition*/
-		SET_BIT(TWCR,2);
-		CLR_BIT(TWCR,4);
-		SET_BIT(TWCR,5);
-		SET_BIT(TWCR,7);
-		while(GET_BIT(TWCR,7) == 0);
-		if(TWSR == MASTER_START_CONDITION_TRANSMITTED)
+		if(u8CurrentStatus == MASTER_START_CONDITION_TRANSMITTED)
 		{
-			/*Step 2 Send SLA+W*/
-			TWDR = u8SlaveAddressCpy; // Writing Slave Address
-			CLR_BIT(TWDR,0); // Inform slave this is Write Operation
-			SET_BIT(TWCR,7);// Send SLA+W
+			u8SlaveAddressCpy &= 0xFE; // Masking SLA + W , so CLR Last Bit
+			TWI_voidWrite(u8SlaveAddressCpy);
 		}
 		else
 		{
-			//DIO_enuWritePin(DIO_u8PIN_0,DIO_u8LOW);
-
+			return ;
 		}
-		while(!GET_BIT(TWCR,7)); // Waiting to Receive ACK from targeted Slave
-		if(TWSR == MASTER_SLA_W_TRASMITTED_ACK_RECEIVED)
+	}
+	u8CurrentStatus = TWI_u8Get_Status();
+	{
+		if(u8CurrentStatus == MASTER_SLA_W_TRASMITTED_ACK_RECEIVED)
 		{
-			/*Step 3 Send Data*/
-			for(u8CntrLoc = 0 ; u8CntrLoc <u8DataSizeCpy ;  u8CntrLoc++)
+			for(u8CntrLoc = 0 ; u8CntrLoc < u8DataSizeCpy; u8CntrLoc++)
 			{
-				TWDR = pu8DataCpy[u8CntrLoc];
-				TWCR = MASTER_SEND_DATA;
-				SET_BIT(TWCR,7);
-				while(!GET_BIT(TWCR,7));
-				if(TWSR == MASTER_DATA_TRANSMITTED_ACK_RECEIVED)
+				TWI_voidWrite(pu8DataCpy[u8CntrLoc]);
+				u8CurrentStatus = TWI_u8Get_Status();
+				if(u8CurrentStatus ==MASTER_DATA_TRANSMITTED_ACK_RECEIVED)
 				{
 					continue;
 				}
-				else if(TWSR == MASTER_DATA_TRANSMITTED_NO_ACK_RECEIVED)
+				else if(u8CurrentStatus == MASTER_DATA_TRANSMITTED_NO_ACK_RECEIVED)
 				{
-					break;
+					continue;
+				}
+				else if(u8CurrentStatus == MASTER_ARBITRATION_LOST)
+				{
+					/*Bus is Released*/
+					return;
 				}
 				else
 				{
-					break;
+					return;
 				}
 			}
-
 		}
-		else if(TWSR == MASTER_SLA_W_TRASMITTED_NO_ACK_RECEIVED)
+		else if(u8CurrentStatus == MASTER_SLA_W_TRASMITTED_NO_ACK_RECEIVED)
 		{
-			/*Send Repeated Start Condition*/
-
+			/*We May Send Data Or Repeated Start Or Stop Condition */
+			return;
 		}
-		else if(TWSR == MASTER_ARBITRATION_LOST)
+		else if(u8CurrentStatus == MASTER_ARBITRATION_LOST)
 		{
+			/*Bus is Released*/
 			return;
 		}
 		else
 		{
 			return;
 		}
-
-	}
-	else
-	{
-		return;
 	}
 
+	TWI_voidStop();
 
 }
-void I2C_u8SlaveReceive(uint8 *pu8DataCpy , uint8 u8ArraySizeCpy)
+
+
+void I2C_voidSlaveReceive(uint8 *pu8DataCpy, uint8 u8ArraySizeCpy)
 {
-	uint8 u8CtrLOC;
-	//SET_BIT(TWCR,2);
-	CLR_BIT(TWCR,4);
-	CLR_BIT(TWCR,5);  
-	SET_BIT(TWCR,6); //enable ack
-	SET_BIT(TWCR,7); //clear interrupt flag
-	
-	while(!GET_BIT(TWCR,7)); 
-	SET_BIT(TWCR,7);
-	
-	while(!GET_BIT(TWCR,7));
-	
-	for(u8CtrLOC = 0 ; u8CtrLOC < u8ArraySizeCpy ; u8CtrLOC++)
-	{
-		pu8DataCpy[u8CtrLOC] = TWDR;
-		SET_BIT(TWCR,7);
+		uint8 u8CtrLOC;
+		CLR_BIT(TWCR,4);
+		CLR_BIT(TWCR,5);
+		SET_BIT(TWCR,6); //enable ack
+		SET_BIT(TWCR,7); //clear interrupt flag
+
 		while(!GET_BIT(TWCR,7));
-	}
-	
-	SET_BIT(TWCR,7);
+		for(u8CtrLOC = 0 ; u8CtrLOC < u8ArraySizeCpy ; u8CtrLOC++)
+		{
+			pu8DataCpy[u8CtrLOC] = TWI_u8Read_ACK();
+		}
+
+		SET_BIT(TWCR,7);
+
+}
+
+
+void TWI_voidStart(void)
+{
+	//SET_BIT(TWCR,2); // TWI Enable Pin
+	CLR_BIT(TWCR,4); // TWI Disable Stop Condition
+	SET_BIT(TWCR,5); // TWI Enable Start Condition
+	SET_BIT(TWCR,7); // Clear TWINT Flag
+	while(GET_BIT(TWCR,7) == 0); // Wait for TWINT Flag to be Set (Start/Repeated Start Condition Sent Successfully)
+}
+
+
+void TWI_voidStop(void)
+{
+	SET_BIT(TWCR,2); //TWI Enable Pin
+	SET_BIT(TWCR,4); // TWI Enable Stop Condition
+	CLR_BIT(TWCR,5); // TWI Disable Start Condition
+	SET_BIT(TWCR,7); // Clear TWINT Flag
+}
+
+void TWI_voidWrite(uint8 u8DataCpy)
+{
+	/* TWI_Start Must Be Called*/
+	TWDR = u8DataCpy;
+
+	SET_BIT(TWCR,2); // TWI Enable Pin
+	SET_BIT(TWCR,7); // Clear TWINT Flag
+	while(GET_BIT(TWCR,7) == 0); // Wait for TWINT Flag to be Set (Data Sent Successfully)
+}
+
+uint8 TWI_u8Read_ACK(void)
+{
+	uint8 u8ReturnLoc = 0;
+	SET_BIT(TWCR,2); // TWI Enable Pin
+	SET_BIT(TWCR,6); // TWI Enable ACK
+	SET_BIT(TWCR,7); // Clear TWINT Flag
+
+	while(GET_BIT(TWCR,7) == 0); // Wait for TWINT Flag to be Set (Data Received Successfully)
+	u8ReturnLoc = TWDR;
+	return u8ReturnLoc;
+}
+
+uint8 TWI_u8Read_NACK(void)
+{
+	uint8 u8ReturnLoc = 0;
+	SET_BIT(TWCR,2); // TWI Enable Pin
+	CLR_BIT(TWCR,6); // TWI Disable ACK
+	SET_BIT(TWCR,7); // Clear TWINT Flag
+	while(GET_BIT(TWCR,7) == 0); // Wait for TWINT Flag to be Set (Data Received Successfully)
+	u8ReturnLoc = TWDR;
+	return u8ReturnLoc;
+}
+
+uint8 TWI_u8Get_Status(void)
+{
+	uint8 u8ReturnStatusLoc = 0;
+	u8ReturnStatusLoc = (TWSR & 0xF8);
+	return u8ReturnStatusLoc;
 }

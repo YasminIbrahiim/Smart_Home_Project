@@ -16,7 +16,7 @@
 #include "EEPROM.h"
 #include "EEPROM_cfg.h"
 
-void EEPROM_voidWrite(uint8 u8AddressCpy , uint8 u8DataCpy , uint8 *u8BoolWritten)
+void EEPROM_voidWrite(uint8 u8AddressCpy , uint8 u8DataCpy)
 {
 	uint8 u8CurrentStatus = 0;
 	TWI_voidStart();
@@ -44,7 +44,7 @@ void EEPROM_voidWrite(uint8 u8AddressCpy , uint8 u8DataCpy , uint8 *u8BoolWritte
 						/*If ACK Received, We Send the date to be written*/
 						TWI_voidWrite(u8DataCpy);
 						TWI_voidStop();
-						*u8BoolWritten = 0x01;
+
 						return;
 					}
 					else if(u8CurrentStatus == MASTER_DATA_TRANSMITTED_NO_ACK_RECEIVED)
@@ -88,6 +88,7 @@ void EEPROM_voidRead(uint8 u8AddressCpy, uint8 *u8DataCpy)
     /* Send the Start Bit */
     TWI_voidStart();
     u8CurrentStatus = TWI_u8Get_Status();
+
     {
     	if(u8CurrentStatus == MASTER_START_CONDITION_TRANSMITTED)
     	{
@@ -100,6 +101,7 @@ void EEPROM_voidRead(uint8 u8AddressCpy, uint8 *u8DataCpy)
     	}
     }
     u8CurrentStatus = TWI_u8Get_Status();
+
 	{
 		if(u8CurrentStatus == MASTER_SLA_W_TRASMITTED_ACK_RECEIVED)
 		{
@@ -109,10 +111,14 @@ void EEPROM_voidRead(uint8 u8AddressCpy, uint8 *u8DataCpy)
 				if(u8CurrentStatus ==MASTER_DATA_TRANSMITTED_ACK_RECEIVED)
 				{
 					/*If ACK Received, We Send Repeated Start*/
-					TWI_voidStart();
+
+
 					u8CurrentStatus = TWI_u8Get_Status();
-					if(u8CurrentStatus == MASTER_REPEATED_START_CONDITION_TRANSMITTED)
+
+					if(u8CurrentStatus == MASTER_DATA_TRANSMITTED_ACK_RECEIVED)
 					{
+						TWI_voidStop();
+						TWI_voidStart();
 						// Masking SLA + R , so CLR Last Bit
 
 						 TWI_voidWrite(EEPROM_ADDRESS|EEPROM_READ);
@@ -123,17 +129,8 @@ void EEPROM_voidRead(uint8 u8AddressCpy, uint8 *u8DataCpy)
 						 {
 
 							 *u8DataCpy = TWI_u8Read_NACK();
-							 u8CurrentStatus = TWI_u8Get_Status();
-							 if(u8CurrentStatus == MASTER_DATA_RECEIVED_NO_ACK_RETURNED)
-							 {
-								 TWI_voidStop();
-								 return;
-							 }
-							 else if(u8CurrentStatus == MASTER_DATA_RECEIVED_ACK_RETURNED)
-							 {
-
-								 return;
-							 }
+							 TWI_voidStop();
+							 return;
 
 						 }
 						 else if(u8CurrentStatus == MASTER_SLA_R_TRANSMITTED_NO_ACK_RECEIVED)
@@ -148,8 +145,7 @@ void EEPROM_voidRead(uint8 u8AddressCpy, uint8 *u8DataCpy)
 					}
 					else
 					{
-						//DIO_enuWritePin(DIO_u8PIN_1,DIO_u8HIGH);
-						*u8DataCpy = u8CurrentStatus;
+
 						return;
 					}
 

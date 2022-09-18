@@ -83,6 +83,9 @@ typedef enum
 
 #define SLAVE_WAIT_FOR_ADDRESSED			((uint8) 0x44)
 
+#define SLAVE_READ_ACK						((uint8) 0x00)
+
+
 #define F_CPU	(8000000)
 
 

@@ -8,7 +8,7 @@
 #ifndef EEPROM_CFG_H_
 #define EEPROM_CFG_H_
 
-#define EEPROM_ADDRESS		((uint8) 0xA0)
+#define EEPROM_ADDRESS		((uint8) 0xA8)
 #define EEPROM_WRITE		((uint8) 0x00)
 #define EEPROM_READ			((uint8) 0x01)
 
