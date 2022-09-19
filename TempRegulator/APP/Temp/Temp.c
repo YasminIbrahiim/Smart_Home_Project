@@ -8,8 +8,10 @@
 #include "../../HAL/RELAY/RELAY.h"
 #include "../../HAL/LCD/LCD.h"
 #include "../../HAL/LED/LED.h"
-
 #include "Temp.h"
+
+//#include "../../HAL/EXT_EEPROM/EEPROM.h"
+#include "../../MCAL/I2C/I2C.h"
 #include "Temp_cfg.h"
 #include "Temp_priv.h"
 
@@ -53,6 +55,8 @@ void Temp_vidReadTemp(void)
 	LCD_enuWriteCmd(LCD_u8NUM_1 , LCD_u8CLEAR);
 	LCD_enuWriteChar(LCD_u8NUM_1 , ' ');
 	LCD_enuWritenumber(LCD_u8NUM_1,Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent );
+	EEPROM_voidWrite(0x10, Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent);
+
 }
 
 
@@ -74,8 +78,8 @@ void Temp_vidTempSystemTask(void)
 	{
 	case TEMP_StateOFF:
 	{
-		if(Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent <
-		(Temp_astrChannelMapping[Temp_u8Channel].u8TempNormal - Temp_astrChannelMapping[Temp_u8Channel].u8TempThreshold ))
+		if(Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent >
+		(Temp_astrChannelMapping[Temp_u8Channel].u8TempNormal + Temp_astrChannelMapping[Temp_u8Channel].u8TempThreshold ))
 		{
 			Temp_astrChannelMapping[Temp_u8Channel].u8TempState = TEMP_StateON;
 			Relay_enuState(Temp_astrChannelMapping[Temp_u8Channel].u8RELAYstrChannel , RELAY_ON);
@@ -85,8 +89,8 @@ void Temp_vidTempSystemTask(void)
 	break;
 	case TEMP_StateON:
 	{
-		if(Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent >
-		(Temp_astrChannelMapping[Temp_u8Channel].u8TempNormal + Temp_astrChannelMapping[Temp_u8Channel].u8TempThreshold ))
+		if(Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent <
+		(Temp_astrChannelMapping[Temp_u8Channel].u8TempNormal - Temp_astrChannelMapping[Temp_u8Channel].u8TempThreshold ))
 		{
 			Temp_astrChannelMapping[Temp_u8Channel].u8TempState = TEMP_StateOFF;
 			Relay_enuState(Temp_astrChannelMapping[Temp_u8Channel].u8RELAYstrChannel , RELAY_OFF);

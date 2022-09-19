@@ -24,14 +24,15 @@
 
 int main()
 {
-
 	Temp_vidInit(0);
 
 	while(1)
 	{
 		Temp_vidReadTemp();
 		Temp_vidTempSystemTask();
-		_delay_ms(500);
+		_delay_ms(100);
+
+
 	}
 
 	return 0;
