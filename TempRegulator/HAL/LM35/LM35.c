@@ -26,7 +26,6 @@ void LM35_vidInit(uint8 LM35_u8ChannelNum)
 		DIO_voidInit();
 		ADC_voidEnable();
 		ADC_voidInit();
-		ADC_voidEnable();
 		LCD_voidInit();
 		DIO_enuPullWrite(DIO_u8PIN_0,DIO_u8HIGH);
 	}
@@ -36,7 +35,6 @@ void LM35_vidInit(uint8 LM35_u8ChannelNum)
 		GIE_voidDisable();
 		ADC_voidEnable();
 		ADC_voidInit();
-		ADC_voidEnable();
 		LCD_voidInit();
 		ADC_voidSetCallback(LM35_u16ReadTempUpdate);
 		DIO_enuPullWrite(DIO_u8PIN_0,DIO_u8HIGH);

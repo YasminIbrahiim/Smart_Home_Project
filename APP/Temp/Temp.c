@@ -74,8 +74,8 @@ void Temp_vidTempSystemTask(void)
 	{
 	case TEMP_StateOFF:
 	{
-		if(Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent <
-		(Temp_astrChannelMapping[Temp_u8Channel].u8TempNormal - Temp_astrChannelMapping[Temp_u8Channel].u8TempThreshold ))
+		if(Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent >
+		(Temp_astrChannelMapping[Temp_u8Channel].u8TempNormal + Temp_astrChannelMapping[Temp_u8Channel].u8TempThreshold ))
 		{
 			Temp_astrChannelMapping[Temp_u8Channel].u8TempState = TEMP_StateON;
 			Relay_enuState(Temp_astrChannelMapping[Temp_u8Channel].u8RELAYstrChannel , RELAY_ON);
@@ -85,8 +85,8 @@ void Temp_vidTempSystemTask(void)
 	break;
 	case TEMP_StateON:
 	{
-		if(Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent >
-		(Temp_astrChannelMapping[Temp_u8Channel].u8TempNormal + Temp_astrChannelMapping[Temp_u8Channel].u8TempThreshold ))
+		if(Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent <
+		(Temp_astrChannelMapping[Temp_u8Channel].u8TempNormal - Temp_astrChannelMapping[Temp_u8Channel].u8TempThreshold ))
 		{
 			Temp_astrChannelMapping[Temp_u8Channel].u8TempState = TEMP_StateOFF;
 			Relay_enuState(Temp_astrChannelMapping[Temp_u8Channel].u8RELAYstrChannel , RELAY_OFF);

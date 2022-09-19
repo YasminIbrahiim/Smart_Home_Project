@@ -211,7 +211,7 @@ LOAD c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgc
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x6ed6
+.text           0x00000000     0x6ef0
  *(.vectors)
  .vectors       0x00000000       0x54 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -623,106 +623,109 @@ LOAD c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgc
  .text.Relay_OFFNC_ONNO
                 0x00003458      0x144 ./HAL/RELAY/RELAY.o
  .text.LM35_vidInit
-                0x0000359c       0x8c ./HAL/LM35/LM35.o
+                0x0000359c       0x84 ./HAL/LM35/LM35.o
                 0x0000359c                LM35_vidInit
  .text.LM35_u16ReadTemp
-                0x00003628       0x76 ./HAL/LM35/LM35.o
-                0x00003628                LM35_u16ReadTemp
+                0x00003620       0x76 ./HAL/LM35/LM35.o
+                0x00003620                LM35_u16ReadTemp
  .text.LM35_u16ReadTempUpdate
-                0x0000369e      0x12e ./HAL/LM35/LM35.o
-                0x0000369e                LM35_u16ReadTempUpdate
+                0x00003696      0x12e ./HAL/LM35/LM35.o
+                0x00003696                LM35_u16ReadTempUpdate
  .text.LM35_u16ReadTempSync
-                0x000037cc       0x96 ./HAL/LM35/LM35.o
+                0x000037c4       0x96 ./HAL/LM35/LM35.o
  .text.LM35_u16ReadTempAsync
-                0x00003862       0x96 ./HAL/LM35/LM35.o
+                0x0000385a       0x96 ./HAL/LM35/LM35.o
  .text.LED_enuWriteValue
-                0x000038f8      0x12a ./HAL/LED/LED.o
-                0x000038f8                LED_enuWriteValue
+                0x000038f0      0x12a ./HAL/LED/LED.o
+                0x000038f0                LED_enuWriteValue
  .text.LED_enuToggle
-                0x00003a22       0x3e ./HAL/LED/LED.o
-                0x00003a22                LED_enuToggle
+                0x00003a1a       0x3e ./HAL/LED/LED.o
+                0x00003a1a                LED_enuToggle
  .text.LED_enuAllOff
-                0x00003a60       0x30 ./HAL/LED/LED.o
-                0x00003a60                LED_enuAllOff
+                0x00003a58       0x30 ./HAL/LED/LED.o
+                0x00003a58                LED_enuAllOff
  .text.LCD_voidInit
-                0x00003a90     0x161c ./HAL/LCD/LCD.o
-                0x00003a90                LCD_voidInit
+                0x00003a88     0x161c ./HAL/LCD/LCD.o
+                0x00003a88                LCD_voidInit
  .text.LCD_enuWriteCmd
-                0x000050ac       0x5c ./HAL/LCD/LCD.o
-                0x000050ac                LCD_enuWriteCmd
+                0x000050a4       0x5c ./HAL/LCD/LCD.o
+                0x000050a4                LCD_enuWriteCmd
  .text.LCD_enuWriteChar
-                0x00005108       0x5c ./HAL/LCD/LCD.o
-                0x00005108                LCD_enuWriteChar
+                0x00005100       0x5c ./HAL/LCD/LCD.o
+                0x00005100                LCD_enuWriteChar
  .text.LCD_enuHelp
-                0x00005164      0x1b8 ./HAL/LCD/LCD.o
+                0x0000515c      0x1b8 ./HAL/LCD/LCD.o
  .text.LCD_enuWriteString
-                0x0000531c       0x58 ./HAL/LCD/LCD.o
-                0x0000531c                LCD_enuWriteString
+                0x00005314       0x58 ./HAL/LCD/LCD.o
+                0x00005314                LCD_enuWriteString
  .text.LCD_enuWritenumber
-                0x00005374      0x2f4 ./HAL/LCD/LCD.o
-                0x00005374                LCD_enuWritenumber
+                0x0000536c      0x2f4 ./HAL/LCD/LCD.o
+                0x0000536c                LCD_enuWritenumber
  .text.LCD_enuCreateCustChar
-                0x00005668       0x86 ./HAL/LCD/LCD.o
-                0x00005668                LCD_enuCreateCustChar
+                0x00005660       0x86 ./HAL/LCD/LCD.o
+                0x00005660                LCD_enuCreateCustChar
  .text.KEYPAD_voidInit
-                0x000056ee       0x4e ./HAL/KEYPAD/KEYPAD_prog.o
-                0x000056ee                KEYPAD_voidInit
+                0x000056e6       0x4e ./HAL/KEYPAD/KEYPAD_prog.o
+                0x000056e6                KEYPAD_voidInit
  .text.KEYPAD_uint8GetPressedKey
-                0x0000573c      0x3ec ./HAL/KEYPAD/KEYPAD_prog.o
-                0x0000573c                KEYPAD_uint8GetPressedKey
+                0x00005734      0x3ec ./HAL/KEYPAD/KEYPAD_prog.o
+                0x00005734                KEYPAD_uint8GetPressedKey
  .text.DC_Motor_voidInit
-                0x00005b28      0x1b0 ./HAL/DC_Motor/DC_Motor.o
-                0x00005b28                DC_Motor_voidInit
+                0x00005b20      0x1b0 ./HAL/DC_Motor/DC_Motor.o
+                0x00005b20                DC_Motor_voidInit
  .text.DC_Motor_enuState
-                0x00005cd8      0x546 ./HAL/DC_Motor/DC_Motor.o
-                0x00005cd8                DC_Motor_enuState
+                0x00005cd0      0x546 ./HAL/DC_Motor/DC_Motor.o
+                0x00005cd0                DC_Motor_enuState
  .text.button_voidInit
-                0x0000621e      0x12c ./HAL/BUTTON/BUTTON.o
-                0x0000621e                button_voidInit
+                0x00006216      0x12c ./HAL/BUTTON/BUTTON.o
+                0x00006216                button_voidInit
  .text.Button_enuPressedValue
-                0x0000634a       0xd8 ./HAL/BUTTON/BUTTON.o
-                0x0000634a                Button_enuPressedValue
+                0x00006342       0xd8 ./HAL/BUTTON/BUTTON.o
+                0x00006342                Button_enuPressedValue
  .text.BuzzerON
-                0x00006422       0x1c ./APP/Temp/Temp.o
-                0x00006422                BuzzerON
+                0x0000641a       0x1c ./APP/Temp/Temp.o
+                0x0000641a                BuzzerON
  .text.BuzzerOFF
-                0x0000643e       0x36 ./APP/Temp/Temp.o
-                0x0000643e                BuzzerOFF
+                0x00006436       0x36 ./APP/Temp/Temp.o
+                0x00006436                BuzzerOFF
+ .text.buzzerInit
+                0x0000646c       0x26 ./APP/Temp/Temp.o
+                0x0000646c                buzzerInit
  .text.Temp_vidInit
-                0x00006474       0x24 ./APP/Temp/Temp.o
-                0x00006474                Temp_vidInit
+                0x00006492       0x20 ./APP/Temp/Temp.o
+                0x00006492                Temp_vidInit
  .text.Temp_vidReadTemp
-                0x00006498       0xaa ./APP/Temp/Temp.o
-                0x00006498                Temp_vidReadTemp
+                0x000064b2       0xaa ./APP/Temp/Temp.o
+                0x000064b2                Temp_vidReadTemp
  .text.Temp_vidTempSystemTask
-                0x00006542      0x30e ./APP/Temp/Temp.o
-                0x00006542                Temp_vidTempSystemTask
- .text.calc     0x00006850      0x168 ./APP/calc.o
-                0x00006850                calc
+                0x0000655c      0x30e ./APP/Temp/Temp.o
+                0x0000655c                Temp_vidTempSystemTask
+ .text.calc     0x0000686a      0x168 ./APP/calc.o
+                0x0000686a                calc
  .text.puin8_calculation
-                0x000069b8      0x33e ./APP/calc.o
-                0x000069b8                puin8_calculation
- .text.main     0x00006cf6      0x108 ./APP/main.o
-                0x00006cf6                main
- .text.libgcc   0x00006dfe       0x18 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
-                0x00006dfe                __udivmodqi4
- .text.libgcc   0x00006e16       0x26 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
-                0x00006e16                __divmodhi4
-                0x00006e16                _div
- .text.libgcc   0x00006e3c        0x0 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00006e3c        0x0 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00006e3c        0x0 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00006e3c       0x28 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00006e3c                __udivmodhi4
- .text.libgcc   0x00006e64       0x38 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00006e64                __prologue_saves__
- .text.libgcc   0x00006e9c       0x36 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00006e9c                __epilogue_restores__
-                0x00006ed2                . = ALIGN (0x2)
+                0x000069d2      0x33e ./APP/calc.o
+                0x000069d2                puin8_calculation
+ .text.main     0x00006d10      0x108 ./APP/main.o
+                0x00006d10                main
+ .text.libgcc   0x00006e18       0x18 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                0x00006e18                __udivmodqi4
+ .text.libgcc   0x00006e30       0x26 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                0x00006e30                __divmodhi4
+                0x00006e30                _div
+ .text.libgcc   0x00006e56        0x0 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00006e56        0x0 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00006e56        0x0 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00006e56       0x28 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00006e56                __udivmodhi4
+ .text.libgcc   0x00006e7e       0x38 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00006e7e                __prologue_saves__
+ .text.libgcc   0x00006eb6       0x36 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00006eb6                __epilogue_restores__
+                0x00006eec                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00006ed2        0x0 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00006ed2                exit
-                0x00006ed2                _exit
+ .fini9         0x00006eec        0x0 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00006eec                exit
+                0x00006eec                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -741,11 +744,11 @@ LOAD c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgc
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00006ed2        0x4 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00006eec        0x4 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00006ed6                _etext = .
+                0x00006ef0                _etext = .
 
-.data           0x00800060      0x19c load address 0x00006ed6
+.data           0x00800060      0x19c load address 0x00006ef0
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -961,8 +964,8 @@ LOAD c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgc
  COMMON         0x00800231        0x1 ./APP/Temp/Temp.o
                 0x00800231                Temp_u8Channel
                 0x00800232                PROVIDE (__bss_end, .)
-                0x00006ed6                __data_load_start = LOADADDR (.data)
-                0x00007072                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00006ef0                __data_load_start = LOADADDR (.data)
+                0x0000708c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800232        0x0
                 0x00800232                PROVIDE (__noinit_start, .)
@@ -987,7 +990,7 @@ LOAD c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgc
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x7ed8
+.stab           0x00000000     0x7f14
  *(.stab)
  .stab          0x00000000      0x240 ./SERVICE/SVAR/SVAR.o
  .stab          0x00000240      0x42c ./SERVICE/ICUM/ICUM.o
@@ -1022,42 +1025,42 @@ LOAD c:/imt_sdk_win_64/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgc
                                 0x510 (size before relaxing)
  .stab          0x00003e94      0x108 ./HAL/RELAY/RELAY_cfg.o
                                 0x228 (size before relaxing)
- .stab          0x00003f9c      0x51c ./HAL/LM35/LM35.o
-                                0x528 (size before relaxing)
- .stab          0x000044b8       0xfc ./HAL/LM35/LM35_cfg.o
+ .stab          0x00003f9c      0x504 ./HAL/LM35/LM35.o
+                                0x510 (size before relaxing)
+ .stab          0x000044a0       0xfc ./HAL/LM35/LM35_cfg.o
                                 0x1e0 (size before relaxing)
- .stab          0x000045b4      0x42c ./HAL/LED/LED.o
+ .stab          0x0000459c      0x42c ./HAL/LED/LED.o
                                 0x438 (size before relaxing)
- .stab          0x000049e0      0x108 ./HAL/LED/LED_cfg.o
+ .stab          0x000049c8      0x108 ./HAL/LED/LED_cfg.o
                                 0x204 (size before relaxing)
- .stab          0x00004ae8     0x1488 ./HAL/LCD/LCD.o
+ .stab          0x00004ad0     0x1488 ./HAL/LCD/LCD.o
                                0x1494 (size before relaxing)
- .stab          0x00005f70      0x108 ./HAL/LCD/LCD_cfg.o
+ .stab          0x00005f58      0x108 ./HAL/LCD/LCD_cfg.o
                                 0x21c (size before relaxing)
- .stab          0x00006078      0x5dc ./HAL/KEYPAD/KEYPAD_prog.o
+ .stab          0x00006060      0x5dc ./HAL/KEYPAD/KEYPAD_prog.o
                                 0x5e8 (size before relaxing)
- .stab          0x00006654      0x570 ./HAL/DC_Motor/DC_Motor.o
+ .stab          0x0000663c      0x570 ./HAL/DC_Motor/DC_Motor.o
                                 0x57c (size before relaxing)
- .stab          0x00006bc4      0x108 ./HAL/DC_Motor/DC_Motor_cfg.o
+ .stab          0x00006bac      0x108 ./HAL/DC_Motor/DC_Motor_cfg.o
                                 0x228 (size before relaxing)
- .stab          0x00006ccc      0x378 ./HAL/BUTTON/BUTTON.o
+ .stab          0x00006cb4      0x378 ./HAL/BUTTON/BUTTON.o
                                 0x384 (size before relaxing)
- .stab          0x00007044      0x108 ./HAL/BUTTON/BUTTON_cfg.o
+ .stab          0x0000702c      0x108 ./HAL/BUTTON/BUTTON_cfg.o
                                 0x204 (size before relaxing)
- .stab          0x0000714c      0x39c ./APP/Temp/Temp.o
-                                0x3a8 (size before relaxing)
- .stab          0x000074e8       0xfc ./APP/Temp/Temp_cfg.o
+ .stab          0x00007134      0x3f0 ./APP/Temp/Temp.o
+                                0x3fc (size before relaxing)
+ .stab          0x00007524       0xfc ./APP/Temp/Temp_cfg.o
                                 0x1e0 (size before relaxing)
- .stab          0x000075e4       0xd8 ./APP/2_SEV/7_seg.o
+ .stab          0x00007620       0xd8 ./APP/2_SEV/7_seg.o
                                  0xe4 (size before relaxing)
- .stab          0x000076bc      0x5f4 ./APP/calc.o
+ .stab          0x000076f8      0x5f4 ./APP/calc.o
                                 0x78c (size before relaxing)
- .stab          0x00007cb0      0x228 ./APP/main.o
+ .stab          0x00007cec      0x228 ./APP/main.o
                                 0x498 (size before relaxing)
 
-.stabstr        0x00000000     0x3722
+.stabstr        0x00000000     0x3735
  *(.stabstr)
- .stabstr       0x00000000     0x3722 ./SERVICE/SVAR/SVAR.o
+ .stabstr       0x00000000     0x3735 ./SERVICE/SVAR/SVAR.o
 
 .stab.excl
  *(.stab.excl)
