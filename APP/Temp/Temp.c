@@ -2,6 +2,7 @@
 #include "../../LIB/BIT_MATH.h"
 
 #include "../../MCAL/TIM/TIM0/TIM0.h"
+#include "../../MCAL/GIE/GIE.h"
 
 #include "../../HAL/LM35/LM35.h"
 #include "../../HAL/RELAY/RELAY.h"
@@ -17,8 +18,9 @@ uint8 Temp_u8Channel;
 
 void BuzzerON(void)
 {
+
 	LED_enuToggle(LED_u8NUM_0);
-	TIM0_voidDelayMs(500);
+	TIM0_voidDelayMs(3000);
 
 }
 void BuzzerOFF(void)
@@ -27,9 +29,16 @@ void BuzzerOFF(void)
 
 }
 
+void buzzerInit(void)
+{
+	GIE_voidDisable();
+	TIM0_voidFPWMInit();
+	TIM0_voidSetCtcCallback(BuzzerON);
+	TIM0_voidEnableCTCIntterrupt();
+	GIE_voidEnable();
+}
 void Temp_vidInit(uint8 TempChannel)
 {
-	TIM0_voidFPWMInit();
 
 	LM35_vidInit(TempChannel);
 	Temp_u8Channel = TempChannel;
@@ -54,7 +63,7 @@ void Temp_vidTempSystemTask(void)
 			LM35_u16ReadTemp(Temp_astrChannelMapping[Temp_u8Channel].u8LM35strChannel);
 	if(Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent > TempFire)
 	{
-		BuzzerON();
+		buzzerInit();
 	}
 	else if(Temp_astrChannelMapping[Temp_u8Channel].u8TempCurrent < TempSafety)
 	{
