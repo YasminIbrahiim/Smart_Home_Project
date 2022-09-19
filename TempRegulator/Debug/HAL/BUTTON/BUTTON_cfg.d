@@ -1,0 +1,12 @@
+HAL/BUTTON/BUTTON_cfg.o HAL/BUTTON/BUTTON_cfg.o:  \
+ ../HAL/BUTTON/BUTTON_cfg.c ../HAL/BUTTON/../../LIB/STD_Types.h \
+  ../HAL/BUTTON/../../MCAL/DIO/DIO.h ../HAL/BUTTON/BUTTON_cfg.h \
+  ../HAL/BUTTON/BUTTON_priv.h
+
+../HAL/BUTTON/../../LIB/STD_Types.h:
+
+../HAL/BUTTON/../../MCAL/DIO/DIO.h:
+
+../HAL/BUTTON/BUTTON_cfg.h:
+
+../HAL/BUTTON/BUTTON_priv.h:

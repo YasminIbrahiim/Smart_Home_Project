@@ -1,0 +1,14 @@
+MCAL/TIM/TIM0/TIM0.o MCAL/TIM/TIM0/TIM0.o: ../MCAL/TIM/TIM0/TIM0.c \
+  ../MCAL/TIM/TIM0/../../../LIB/STD_Types.h \
+  ../MCAL/TIM/TIM0/../../../LIB/BIT_MATH.h ../MCAL/TIM/TIM0/TIM0.h \
+  ../MCAL/TIM/TIM0/TIM0_cfg.h ../MCAL/TIM/TIM0/TIM0_priv.h
+
+../MCAL/TIM/TIM0/../../../LIB/STD_Types.h:
+
+../MCAL/TIM/TIM0/../../../LIB/BIT_MATH.h:
+
+../MCAL/TIM/TIM0/TIM0.h:
+
+../MCAL/TIM/TIM0/TIM0_cfg.h:
+
+../MCAL/TIM/TIM0/TIM0_priv.h:
