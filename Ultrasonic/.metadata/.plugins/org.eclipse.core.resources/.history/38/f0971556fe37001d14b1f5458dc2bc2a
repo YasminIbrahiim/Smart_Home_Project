@@ -1,0 +1,10 @@
+#include "STD_Types.h"
+#include "BIT_Math.h"
+#include "DIO.h"
+#include "EXTINT0.h"
+#include "GIE.h"
+#include "TIM0.h"
+#include "LCD.h"
+#include "LED.h"
+#include "avr/delay.h"
+

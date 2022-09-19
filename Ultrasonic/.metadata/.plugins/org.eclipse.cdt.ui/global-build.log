@@ -1,0 +1,2106 @@
+??:??:?? **** Clean-only build of configuration Debug for project Ultrasonic ****
+make clean 
+rm -rf  ./DIO.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o  sizedummy  Ultrasonic.lss  ./DIO.d ./LCD.d ./LCD_cfg.d ./LED.d ./LED_cfg.d ./main.d  Ultrasonic.elf
+ 
+??:??:?? **** Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:30:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../LCD.c:30:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_enuWriteData':
+../LCD.c:188: warning: control reaches end of non-void function
+Finished building: ../LCD.c
+ 
+Building file: ../LCD_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"LCD_cfg.d" -MT"LCD_cfg.o" -c -o "LCD_cfg.o" "../LCD_cfg.c"
+Finished building: ../LCD_cfg.c
+ 
+Building file: ../LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"LED.d" -MT"LED.o" -c -o "LED.o" "../LED.c"
+Finished building: ../LED.c
+ 
+Building file: ../LED_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"LED_cfg.d" -MT"LED_cfg.o" -c -o "LED_cfg.o" "../LED_cfg.c"
+Finished building: ../LED_cfg.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:8:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12806 bytes (39.1% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:30:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../LCD.c:30:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_enuWriteData':
+../LCD.c:188: warning: control reaches end of non-void function
+Finished building: ../LCD.c
+ 
+Building file: ../LCD_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LCD_cfg.d" -MT"LCD_cfg.o" -c -o "LCD_cfg.o" "../LCD_cfg.c"
+Finished building: ../LCD_cfg.c
+ 
+Building file: ../LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED.d" -MT"LED.o" -c -o "LED.o" "../LED.c"
+Finished building: ../LED.c
+ 
+Building file: ../LED_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED_cfg.d" -MT"LED_cfg.o" -c -o "LED_cfg.o" "../LED_cfg.c"
+Finished building: ../LED_cfg.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12806 bytes (39.1% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12806 bytes (39.1% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12792 bytes (39.0% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13124 bytes (40.1% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13126 bytes (40.1% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../ICUM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICUM.d" -MT"ICUM.o" -c -o "ICUM.o" "../ICUM.c"
+../ICUM.c:1:33: error: ../../LIB/STD_Types.h: No such file or directory
+../ICUM.c:3:26: error: ../SVAR/SVAR.h: No such file or directory
+In file included from ../ICUM.c:5:
+../ICUM.h:6: error: expected ')' before '*' token
+In file included from ../ICUM.c:7:
+../ICUM_priv.h:7: error: expected specifier-qualifier-list before 'tvpf'
+../ICUM.c:11: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ovf'
+../ICUM.c:12: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Ton'
+../ICUM.c:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Tonu'
+../ICUM.c:14: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Ttotal'
+../ICUM.c:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8FirstReading'
+../ICUM.c:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8ActiveVariant'
+../ICUM.c: In function 'ICUM_voidInit':
+../ICUM.c:21: error: 'ICUM_u8ActiveVariant' undeclared (first use in this function)
+../ICUM.c:21: error: (Each undeclared identifier is reported only once
+../ICUM.c:21: error: for each function it appears in.)
+../ICUM.c:21: warning: implicit declaration of function 'SVAR_u8GetActiveVariant'
+../ICUM.c: At top level:
+../ICUM.c:27: error: expected ')' before '*' token
+../ICUM.c: In function 'ICUM_voidExtIntISR':
+../ICUM.c:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8CntrReading'
+../ICUM.c:39: error: 'ICUM_u8CntrReading' undeclared (first use in this function)
+../ICUM.c:43: error: 'ICUM_u8FirstReading' undeclared (first use in this function)
+../ICUM.c:44: error: 'ICUM_u8ActiveVariant' undeclared (first use in this function)
+../ICUM.c:46: error: 'ovf' undeclared (first use in this function)
+../ICUM.c:51: error: 'Ton' undeclared (first use in this function)
+../ICUM.c:52: error: 'float32' undeclared (first use in this function)
+../ICUM.c:61: error: 'Ttotal' undeclared (first use in this function)
+../ICUM.c:64: error: 'Tonu' undeclared (first use in this function)
+../ICUM.c: In function 'ICUM_voidOvfIsr':
+../ICUM.c:88: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ovfCnt'
+../ICUM.c:88: error: 'ovfCnt' undeclared (first use in this function)
+../ICUM.c:90: error: 'ovf' undeclared (first use in this function)
+make: *** [ICUM.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICUM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICUM.d" -MT"ICUM.o" -c -o "ICUM.o" "../ICUM.c"
+../ICUM.c:1:33: error: ../../LIB/STD_Types.h: No such file or directory
+../ICUM.c:3:26: error: ../SVAR/SVAR.h: No such file or directory
+In file included from ../ICUM.c:5:
+../ICUM.h:6: error: expected ')' before '*' token
+In file included from ../ICUM.c:7:
+../ICUM_priv.h:7: error: expected specifier-qualifier-list before 'tvpf'
+../ICUM.c:11: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ovf'
+../ICUM.c:12: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Ton'
+../ICUM.c:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Tonu'
+../ICUM.c:14: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Ttotal'
+../ICUM.c:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8FirstReading'
+../ICUM.c:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8ActiveVariant'
+../ICUM.c: In function 'ICUM_voidInit':
+../ICUM.c:21: error: 'ICUM_u8ActiveVariant' undeclared (first use in this function)
+../ICUM.c:21: error: (Each undeclared identifier is reported only once
+../ICUM.c:21: error: for each function it appears in.)
+../ICUM.c:21: warning: implicit declaration of function 'SVAR_u8GetActiveVariant'
+../ICUM.c: At top level:
+../ICUM.c:27: error: expected ')' before '*' token
+../ICUM.c: In function 'ICUM_voidExtIntISR':
+../ICUM.c:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8CntrReading'
+../ICUM.c:39: error: 'ICUM_u8CntrReading' undeclared (first use in this function)
+../ICUM.c:43: error: 'ICUM_u8FirstReading' undeclared (first use in this function)
+../ICUM.c:44: error: 'ICUM_u8ActiveVariant' undeclared (first use in this function)
+../ICUM.c:46: error: 'ovf' undeclared (first use in this function)
+../ICUM.c:51: error: 'Ton' undeclared (first use in this function)
+../ICUM.c:52: error: 'float32' undeclared (first use in this function)
+../ICUM.c:61: error: 'Ttotal' undeclared (first use in this function)
+../ICUM.c:64: error: 'Tonu' undeclared (first use in this function)
+make: *** [ICUM.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+make: *** No rule to make target `ICUM_cfg.o', needed by `Ultrasonic.elf'.  Stop.
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:30:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../LCD.c:30:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_enuWriteData':
+../LCD.c:188: warning: control reaches end of non-void function
+Finished building: ../LCD.c
+ 
+Building file: ../LCD_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LCD_cfg.d" -MT"LCD_cfg.o" -c -o "LCD_cfg.o" "../LCD_cfg.c"
+Finished building: ../LCD_cfg.c
+ 
+Building file: ../LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED.d" -MT"LED.o" -c -o "LED.o" "../LED.c"
+Finished building: ../LED.c
+ 
+Building file: ../LED_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED_cfg.d" -MT"LED_cfg.o" -c -o "LED_cfg.o" "../LED_cfg.c"
+Finished building: ../LED_cfg.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13126 bytes (40.1% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13118 bytes (40.0% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../ICUM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICUM.d" -MT"ICUM.o" -c -o "ICUM.o" "../ICUM.c"
+../ICUM.c:1:33: error: ../../LIB/STD_Types.h: No such file or directory
+../ICUM.c:3:26: error: ../SVAR/SVAR.h: No such file or directory
+In file included from ../ICUM.c:5:
+../ICUM.h:6: error: expected ')' before '*' token
+In file included from ../ICUM.c:7:
+../ICUM_priv.h:7: error: expected specifier-qualifier-list before 'tvpf'
+../ICUM.c:11: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ovf'
+../ICUM.c:12: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Ton'
+../ICUM.c:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Tonu'
+../ICUM.c:14: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Ttotal'
+../ICUM.c:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8FirstReading'
+../ICUM.c:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8ActiveVariant'
+../ICUM.c: In function 'ICUM_voidInit':
+../ICUM.c:21: error: 'ICUM_u8ActiveVariant' undeclared (first use in this function)
+../ICUM.c:21: error: (Each undeclared identifier is reported only once
+../ICUM.c:21: error: for each function it appears in.)
+../ICUM.c:21: warning: implicit declaration of function 'SVAR_u8GetActiveVariant'
+../ICUM.c: At top level:
+../ICUM.c:27: error: expected ')' before '*' token
+../ICUM.c: In function 'ICUM_voidExtIntISR':
+../ICUM.c:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8CntrReading'
+../ICUM.c:39: error: 'ICUM_u8CntrReading' undeclared (first use in this function)
+../ICUM.c:43: error: 'ICUM_u8FirstReading' undeclared (first use in this function)
+../ICUM.c:44: error: 'ICUM_u8ActiveVariant' undeclared (first use in this function)
+../ICUM.c:46: error: 'ovf' undeclared (first use in this function)
+../ICUM.c:51: error: 'Ton' undeclared (first use in this function)
+../ICUM.c:52: error: 'float32' undeclared (first use in this function)
+../ICUM.c:61: error: 'Ttotal' undeclared (first use in this function)
+../ICUM.c:64: error: 'Tonu' undeclared (first use in this function)
+../ICUM.c: In function 'ICUM_voidOvfIsr':
+../ICUM.c:88: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ovfCnt'
+../ICUM.c:88: error: 'ovfCnt' undeclared (first use in this function)
+../ICUM.c:90: error: 'ovf' undeclared (first use in this function)
+make: *** [ICUM.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../EXTINT0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"EXTINT0.d" -MT"EXTINT0.o" -c -o "EXTINT0.o" "../EXTINT0.c"
+../EXTINT0.c:2:36: error: ../../../LIB/STD_Types.h: No such file or directory
+../EXTINT0.c:3:35: error: ../../../LIB/BIT_MATH.h: No such file or directory
+In file included from ../EXTINT0.c:4:
+../EXTINT0.h:11: error: expected ')' before 'pfCallbackCpy'
+../EXTINT0.h:13: error: expected ')' before 'u8SenseValueCpy'
+../EXTINT0.c:9: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'EXTINT0_pfCallback'
+../EXTINT0.c: In function 'EXTINT0_voidInit':
+../EXTINT0.c:15: warning: implicit declaration of function 'CLR_BIT'
+../EXTINT0.c:15: error: expected ')' before 'uint8'
+../EXTINT0.c:15: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT0.c:15: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT0.c:16: error: expected ')' before 'uint8'
+../EXTINT0.c:16: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT0.c:16: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT0.c:29: error: expected ')' before 'uint8'
+../EXTINT0.c:29: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT0.c:29: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT0.c:30: warning: implicit declaration of function 'SET_BIT'
+../EXTINT0.c:30: error: expected ')' before 'uint8'
+../EXTINT0.c:30: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT0.c:30: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT0.c: In function 'EXTINT0_voidEnable':
+../EXTINT0.c:36: error: expected ')' before 'uint8'
+../EXTINT0.c:36: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT0.c:36: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT0.c: In function 'EXTINT0_voidDisable':
+../EXTINT0.c:41: error: expected ')' before 'uint8'
+../EXTINT0.c:41: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT0.c:41: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT0.c: At top level:
+../EXTINT0.c:44: error: expected ')' before 'pfCallbackCpy'
+../EXTINT0.c:49: error: expected ')' before 'u8SenseValueCpy'
+../EXTINT0.c: In function '__vector_1':
+../EXTINT0.c:68: warning: implicit declaration of function 'EXTINT0_pfCallback'
+make: *** [EXTINT0.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../EXTINT0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"EXTINT0.d" -MT"EXTINT0.o" -c -o "EXTINT0.o" "../EXTINT0.c"
+Finished building: ../EXTINT0.c
+ 
+Building file: ../EXTINT1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"EXTINT1.d" -MT"EXTINT1.o" -c -o "EXTINT1.o" "../EXTINT1.c"
+../EXTINT1.c:2:36: error: ../../../LIB/STD_Types.h: No such file or directory
+../EXTINT1.c:3:35: error: ../../../LIB/BIT_MATH.h: No such file or directory
+In file included from ../EXTINT1.c:4:
+../EXTINT1.h:11: error: expected ')' before 'pfCallbackCpy'
+../EXTINT1.h:13: error: expected ')' before 'u8SenseValueCpy'
+../EXTINT1.c:9: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'EXTINT1_pfCallback'
+../EXTINT1.c: In function 'EXTINT1_voidInit':
+../EXTINT1.c:15: warning: implicit declaration of function 'CLR_BIT'
+../EXTINT1.c:15: error: expected ')' before 'uint8'
+../EXTINT1.c:15: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT1.c:15: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT1.c:16: error: expected ')' before 'uint8'
+../EXTINT1.c:16: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT1.c:16: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT1.c:29: error: expected ')' before 'uint8'
+../EXTINT1.c:29: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT1.c:29: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT1.c:30: warning: implicit declaration of function 'SET_BIT'
+../EXTINT1.c:30: error: expected ')' before 'uint8'
+../EXTINT1.c:30: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT1.c:30: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT1.c: In function 'EXTINT1_voidEnable':
+../EXTINT1.c:36: error: expected ')' before 'uint8'
+../EXTINT1.c:36: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT1.c:36: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT1.c: In function 'EXTINT1_voidDisable':
+../EXTINT1.c:41: error: expected ')' before 'uint8'
+../EXTINT1.c:41: warning: type defaults to 'int' in declaration of 'type name'
+../EXTINT1.c:41: error: invalid type argument of 'unary *' (have 'int')
+../EXTINT1.c: At top level:
+../EXTINT1.c:44: error: expected ')' before 'pfCallbackCpy'
+../EXTINT1.c:49: error: expected ')' before 'u8SenseValueCpy'
+../EXTINT1.c: In function '__vector_2':
+../EXTINT1.c:68: warning: implicit declaration of function 'EXTINT1_pfCallback'
+make: *** [EXTINT1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../EXTINT1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"EXTINT1.d" -MT"EXTINT1.o" -c -o "EXTINT1.o" "../EXTINT1.c"
+Finished building: ../EXTINT1.c
+ 
+Building file: ../ICUM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICUM.d" -MT"ICUM.o" -c -o "ICUM.o" "../ICUM.c"
+../ICUM.c:1:33: error: ../../LIB/STD_Types.h: No such file or directory
+../ICUM.c:3:26: error: ../SVAR/SVAR.h: No such file or directory
+In file included from ../ICUM.c:5:
+../ICUM.h:6: error: expected ')' before '*' token
+In file included from ../ICUM.c:7:
+../ICUM_priv.h:7: error: expected specifier-qualifier-list before 'tvpf'
+../ICUM.c:11: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ovf'
+../ICUM.c:12: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Ton'
+../ICUM.c:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Tonu'
+../ICUM.c:14: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Ttotal'
+../ICUM.c:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8FirstReading'
+../ICUM.c:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8ActiveVariant'
+../ICUM.c: In function 'ICUM_voidInit':
+../ICUM.c:21: error: 'ICUM_u8ActiveVariant' undeclared (first use in this function)
+../ICUM.c:21: error: (Each undeclared identifier is reported only once
+../ICUM.c:21: error: for each function it appears in.)
+../ICUM.c:21: warning: implicit declaration of function 'SVAR_u8GetActiveVariant'
+../ICUM.c: At top level:
+../ICUM.c:27: error: expected ')' before '*' token
+../ICUM.c: In function 'ICUM_voidExtIntISR':
+../ICUM.c:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_u8CntrReading'
+../ICUM.c:39: error: 'ICUM_u8CntrReading' undeclared (first use in this function)
+../ICUM.c:43: error: 'ICUM_u8FirstReading' undeclared (first use in this function)
+../ICUM.c:44: error: 'ICUM_u8ActiveVariant' undeclared (first use in this function)
+../ICUM.c:46: error: 'ovf' undeclared (first use in this function)
+../ICUM.c:51: error: 'Ton' undeclared (first use in this function)
+../ICUM.c:52: error: 'float32' undeclared (first use in this function)
+../ICUM.c:61: error: 'Ttotal' undeclared (first use in this function)
+../ICUM.c:64: error: 'Tonu' undeclared (first use in this function)
+../ICUM.c: In function 'ICUM_voidOvfIsr':
+../ICUM.c:88: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ovfCnt'
+../ICUM.c:88: error: 'ovfCnt' undeclared (first use in this function)
+../ICUM.c:90: error: 'ovf' undeclared (first use in this function)
+make: *** [ICUM.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../EXTINT0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"EXTINT0.d" -MT"EXTINT0.o" -c -o "EXTINT0.o" "../EXTINT0.c"
+Finished building: ../EXTINT0.c
+ 
+Building file: ../EXTINT1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"EXTINT1.d" -MT"EXTINT1.o" -c -o "EXTINT1.o" "../EXTINT1.c"
+Finished building: ../EXTINT1.c
+ 
+Building file: ../ICUM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICUM.d" -MT"ICUM.o" -c -o "ICUM.o" "../ICUM.c"
+In file included from ../ICUM.c:7:
+../ICUM_priv.h:7: error: expected specifier-qualifier-list before 'tvpf'
+../ICUM.c: In function 'ICUM_voidInit':
+../ICUM.c:22: error: 'tstrIcuCfg' has no member named 'pfcallback'
+../ICUM.c:23: error: 'tstrIcuCfg' has no member named 'pfOvfCallback'
+../ICUM.c: In function 'ICUM_voidGetFreqDuty':
+../ICUM.c:30: error: 'tstrIcuCfg' has no member named 'u32TimerFreq'
+../ICUM.c: In function 'ICUM_voidExtIntISR':
+../ICUM.c:44: error: 'tstrIcuCfg' has no member named 'pfCntrValue'
+../ICUM.c:45: error: 'tstrIcuCfg' has no member named 'pfChangesense'
+../ICUM.c:52: error: 'tstrIcuCfg' has no member named 'pfCntrValue'
+../ICUM.c:53: error: 'tstrIcuCfg' has no member named 'u16OvfCount'
+../ICUM.c:55: error: 'tstrIcuCfg' has no member named 'pfChangesense'
+../ICUM.c:61: error: 'tstrIcuCfg' has no member named 'pfCntrValue'
+../ICUM.c:62: error: 'tstrIcuCfg' has no member named 'u16OvfCount'
+../ICUM.c:66: error: 'tstrIcuCfg' has no member named 'pfChangesense'
+../ICUM.c:68: error: 'tstrIcuCfg' has no member named 'pfCntrValue'
+make: *** [ICUM.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../ICUM_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICUM_cfg.d" -MT"ICUM_cfg.o" -c -o "ICUM_cfg.o" "../ICUM_cfg.c"
+../ICUM_cfg.c:3:21: error: EXTINT0.h: No such file or directory
+../ICUM_cfg.c:4:21: error: EXTINT1.h: No such file or directory
+../ICUM_cfg.c:6:18: error: TIM0.h: No such file or directory
+../ICUM_cfg.c:7:18: error: TIM2.h: No such file or directory
+../ICUM_cfg.c:9:18: error: ICUM.h: No such file or directory
+../ICUM_cfg.c:10:22: error: ICUM_cfg.h: No such file or directory
+../ICUM_cfg.c:11:23: error: ICUM_priv.h: No such file or directory
+../ICUM_cfg.c:21: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_apfConfigSet'
+make: *** [ICUM_cfg.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICUM_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICUM_cfg.d" -MT"ICUM_cfg.o" -c -o "ICUM_cfg.o" "../ICUM_cfg.c"
+../ICUM_cfg.c:3:21: error: EXTINT0.h: No such file or directory
+../ICUM_cfg.c:4:21: error: EXTINT1.h: No such file or directory
+../ICUM_cfg.c:6:18: error: TIM0.h: No such file or directory
+../ICUM_cfg.c:7:18: error: TIM2.h: No such file or directory
+../ICUM_cfg.c:9:18: error: ICUM.h: No such file or directory
+../ICUM_cfg.c:10:22: error: ICUM_cfg.h: No such file or directory
+../ICUM_cfg.c:11:23: error: ICUM_priv.h: No such file or directory
+../ICUM_cfg.c:21: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ICUM_apfConfigSet'
+make: *** [ICUM_cfg.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+make: *** No rule to make target `ICUM_cfg.o', needed by `Ultrasonic.elf'.  Stop.
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:30:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../LCD.c:30:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_enuWriteData':
+../LCD.c:188: warning: control reaches end of non-void function
+Finished building: ../LCD.c
+ 
+Building file: ../LCD_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LCD_cfg.d" -MT"LCD_cfg.o" -c -o "LCD_cfg.o" "../LCD_cfg.c"
+Finished building: ../LCD_cfg.c
+ 
+Building file: ../LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED.d" -MT"LED.o" -c -o "LED.o" "../LED.c"
+Finished building: ../LED.c
+ 
+Building file: ../LED_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED_cfg.d" -MT"LED_cfg.o" -c -o "LED_cfg.o" "../LED_cfg.c"
+Finished building: ../LED_cfg.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13126 bytes (40.1% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Clean-only build of configuration Debug for project Ultrasonic ****
+make clean 
+rm -rf  ./DIO.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o  sizedummy  Ultrasonic.lss  ./DIO.d ./LCD.d ./LCD_cfg.d ./LED.d ./LED_cfg.d ./main.d  Ultrasonic.elf
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../EXTINT0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"EXTINT0.d" -MT"EXTINT0.o" -c -o "EXTINT0.o" "../EXTINT0.c"
+In file included from ../EXTINT0.c:5:
+../EXTINT0.h:4: error: redefinition of typedef 'pf'
+../STD_Types.h:22: error: previous declaration of 'pf' was here
+make: *** [EXTINT0.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+../ICU.c:8: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'u32High'
+../ICU.c: In function 'ICU_u16PulseWidth':
+../ICU.c:13: error: 'ICF1' undeclared (first use in this function)
+../ICU.c:13: error: (Each undeclared identifier is reported only once
+../ICU.c:13: error: for each function it appears in.)
+../ICU.c:19: error: 'u32Start' undeclared (first use in this function)
+../ICU.c:19: error: 'ICR1' undeclared (first use in this function)
+../ICU.c:23: error: 'u32End' undeclared (first use in this function)
+../ICU.c:25: error: 'TCNT1' undeclared (first use in this function)
+../ICU.c:27: error: 'u32High' undeclared (first use in this function)
+../ICU.c:30: warning: control reaches end of non-void function
+make: *** [ICU.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+../ICU.c:8: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'u32High'
+../ICU.c: In function 'ICU_u16PulseWidth':
+../ICU.c:19: error: 'u32Start' undeclared (first use in this function)
+../ICU.c:19: error: (Each undeclared identifier is reported only once
+../ICU.c:19: error: for each function it appears in.)
+../ICU.c:23: error: 'u32End' undeclared (first use in this function)
+../ICU.c:27: error: 'u32High' undeclared (first use in this function)
+../ICU.c:30: warning: control reaches end of non-void function
+make: *** [ICU.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:30:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../LCD.c:30:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_enuWriteData':
+../LCD.c:188: warning: control reaches end of non-void function
+Finished building: ../LCD.c
+ 
+Building file: ../LCD_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LCD_cfg.d" -MT"LCD_cfg.o" -c -o "LCD_cfg.o" "../LCD_cfg.c"
+Finished building: ../LCD_cfg.c
+ 
+Building file: ../LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED.d" -MT"LED.o" -c -o "LED.o" "../LED.c"
+Finished building: ../LED.c
+ 
+Building file: ../LED_cfg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LED_cfg.d" -MT"LED_cfg.o" -c -o "LED_cfg.o" "../LED_cfg.c"
+Finished building: ../LED_cfg.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:5:21: error: EXTINT0.h: No such file or directory
+../main.c:6:17: error: GIE.h: No such file or directory
+../main.c:7:18: error: TIM0.h: No such file or directory
+In file included from ../main.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:21: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:29: warning: implicit declaration of function 'ICU_u16PulseWidth'
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:18: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:26: warning: implicit declaration of function 'ICU_u16PulseWidth'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13200 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (1.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:20: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:28: warning: implicit declaration of function 'ICU_u16PulseWidth'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13200 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (1.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13200 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (1.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13200 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (1.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13122 bytes (40.0% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13122 bytes (40.0% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13122 bytes (40.0% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:20: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:28: warning: implicit declaration of function 'ICU_u32PulseWidth'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+./main.o: In function `HCSR04_voidTrigger':
+../main.c:15: undefined reference to `ICU_u32PulseWidth'
+make: *** [Ultrasonic.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+./main.o: In function `HCSR04_voidTrigger':
+../main.c:15: undefined reference to `ICU_u32PulseWidth'
+make: *** [Ultrasonic.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+./main.o: In function `HCSR04_voidTrigger':
+../main.c:15: undefined reference to `ICU_u32PulseWidth'
+make: *** [Ultrasonic.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+./main.o: In function `HCSR04_voidTrigger':
+../main.c:15: undefined reference to `ICU_u32PulseWidth'
+make: *** [Ultrasonic.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+./main.o: In function `HCSR04_voidTrigger':
+../main.c:15: undefined reference to `ICU_u32PulseWidth'
+make: *** [Ultrasonic.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:20: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:28: warning: implicit declaration of function 'ICU_u16PulseWidth'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13122 bytes (40.0% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13122 bytes (40.0% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13318 bytes (40.6% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (1.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13318 bytes (40.6% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (1.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'HCSR04_u32GetPulseWidth':
+../main.c:40: error: 'u16High' undeclared (first use in this function)
+../main.c:40: error: (Each undeclared identifier is reported only once
+../main.c:40: error: for each function it appears in.)
+../main.c:43: warning: control reaches end of non-void function
+../main.c: At top level:
+../main.c:46: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:88: error: 'distance' undeclared (first use in this function)
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:46: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13304 bytes (40.6% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+../ICU.c:10: error: conflicting types for 'ICU_u16PulseWidth'
+../ICU.h:6: error: previous declaration of 'ICU_u16PulseWidth' was here
+make: *** [ICU.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13294 bytes (40.6% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:20: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:28: warning: implicit declaration of function 'ICU_u16PulseWidth'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13112 bytes (40.0% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13112 bytes (40.0% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13180 bytes (40.2% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13180 bytes (40.2% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13198 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13210 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:20: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:28: warning: implicit declaration of function 'ICU_u16PulseWidth'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13226 bytes (40.4% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:20: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:28: warning: implicit declaration of function 'ICU_u16PulseWidth'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13234 bytes (40.4% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:20: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:28: warning: implicit declaration of function 'ICU_u16PulseWidth'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13234 bytes (40.4% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:20: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:28: warning: implicit declaration of function 'ICU_u16PulseWidth'
+Finished building: ../main.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13226 bytes (40.4% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13198 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project Ultrasonic ****
+make all 
+Building file: ../ICU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ICU.d" -MT"ICU.o" -c -o "ICU.o" "../ICU.c"
+In file included from ../ICU.c:5:
+../ICU_priv.h:5:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:139:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:6:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:138:1: warning: this is the location of the previous definition
+In file included from ../ICU.c:5:
+../ICU_priv.h:7:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from ../ICU.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:158:1: warning: this is the location of the previous definition
+Finished building: ../ICU.c
+ 
+Building target: Ultrasonic.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic.map -mmcu=atmega32 -o "Ultrasonic.elf"  ./DIO.o ./ICU.o ./LCD.o ./LCD_cfg.o ./LED.o ./LED_cfg.o ./main.o   
+Finished building target: Ultrasonic.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic.elf  >"Ultrasonic.lss"
+Finished building: Ultrasonic.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13226 bytes (40.4% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

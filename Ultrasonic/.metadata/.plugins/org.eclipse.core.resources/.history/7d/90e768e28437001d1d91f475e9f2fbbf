@@ -1,0 +1,138 @@
+#include "STD_Types.h"
+#include "BIT_Math.h"
+#include <avr/io.h>
+#include "DIO.h"
+#include "LCD.h"
+#include "LED.h"
+
+#define  F_CPU 1000000UL
+
+#include "avr/delay.h"
+
+
+uint16 a, b, high, distance;
+
+
+void HCSR04_voidTrigger(void)
+{
+	DIO_enuWritePin(DIO_u8PIN_31 , DIO_u8HIGH);
+	_delay_ms(15);
+	DIO_enuWritePin(DIO_u8PIN_31 , DIO_u8LOW);
+}
+
+
+
+uint32 HCSR04_u32GetPulseWidth(void)
+{
+	/*
+	for(u32Cntr=0;u32Cntr<600000;u32Cntr++)
+	{
+		while(DIO_u8PIN_0 == DIO_u8LOW);
+		break;
+	}
+
+	TCCR1A=0X00;
+	TCCR1B=(1<<CS11);
+	TCNT1=0x00;
+
+	for(u32Cntr=0;u32Cntr<600000;u32Cntr++)
+	{
+		if(DIO_u8PIN_0 == DIO_u8HIGH)
+		{
+			if(TCNT1 > 60000)
+			{
+				break;
+			}
+			else
+			{
+				continue;
+			}
+		}
+		else
+		{
+			break;
+		}
+
+	}
+	result=TCNT1;
+	TCCR1B=0x00;
+
+	return result;
+
+
+*/
+	TCCR1A = 0;
+	TIFR = (1<<ICF1);  	/* Clear ICF (Input Capture flag)  */
+
+
+
+    TCCR1B = 0xc1;  	/* Rising edge, no prescaler , noise canceler*/
+    while ((TIFR&(1<<ICF1)) == 0);
+    a = ICR1;  		/* Take value of capture register */
+    TIFR = (1<<ICF1);  	/* Clear ICF flag */
+    TCCR1B = 0x81;  	/* Falling edge, no prescaler ,noise canceler*/
+    while ((TIFR&(1<<ICF1)) == 0);
+    b = ICR1;  		/* Take value of capture register */
+    TIFR = (1<<ICF1);  	/* Clear ICF flag */
+	TCNT1=0;
+    TCCR1B = 0;  		/* Stop the timer */
+	high=b-a;
+	/*
+	u32Time=HCSR04_u32GetPulseWidth(); */
+
+
+	return high;
+}
+
+
+void main()
+{
+	DIO_voidInit();
+	LCD_voidInit();
+	HCSR04_voidTrigger();
+
+	while(1)
+	{
+		high = HCSR04_u32GetPulseWidth();
+
+		distance=((high*34600)/(F_CPU*2)) ;
+
+		LCD_enuWriteChar(LCD_u8NUM_0 ,'D');
+		LCD_enuWriteChar(LCD_u8NUM_0 ,'I');
+		LCD_enuWriteChar(LCD_u8NUM_0 ,'S');
+		LCD_enuWriteChar(LCD_u8NUM_0 ,'T');
+		LCD_enuWriteChar(LCD_u8NUM_0 ,'A');
+		LCD_enuWriteChar(LCD_u8NUM_0 ,'N');
+		LCD_enuWriteChar(LCD_u8NUM_0 ,'C');
+		LCD_enuWriteChar(LCD_u8NUM_0 ,'E');
+		LCD_enuWriteChar(LCD_u8NUM_0 ,'=');
+
+
+		LCD_enuWriteChar(LCD_u8NUM_0 ,(distance/10)+48);
+		LCD_enuWriteChar(LCD_u8NUM_0 ,(distance%10)+48);
+
+		_delay_ms(500);
+
+		LCD_enuWriteCmd(LCD_u8NUM_0,0x01);
+
+		/*
+		if (distance>=80)
+		{
+			LCD_enuWriteCmd(LCD_u8NUM_0,0x01);
+			LED_enuWriteValue (LED_u8NUM_0  , LED_u8OFF);
+			LCD_enuWriteChar(LCD_u8NUM_0 ,'n');
+			LCD_enuWriteChar(LCD_u8NUM_0 ,'o');
+			LCD_enuWriteChar(LCD_u8NUM_0 ,' ');
+			LCD_enuWriteChar(LCD_u8NUM_0 ,'o');
+			LCD_enuWriteChar(LCD_u8NUM_0 ,'b');
+			LCD_enuWriteChar(LCD_u8NUM_0 ,'j');
+			LCD_enuWriteChar(LCD_u8NUM_0 ,'e');
+			LCD_enuWriteChar(LCD_u8NUM_0 ,'c');
+			LCD_enuWriteChar(LCD_u8NUM_0 ,'t');
+			_delay_ms(500);
+
+		}
+		*/
+	}
+
+}

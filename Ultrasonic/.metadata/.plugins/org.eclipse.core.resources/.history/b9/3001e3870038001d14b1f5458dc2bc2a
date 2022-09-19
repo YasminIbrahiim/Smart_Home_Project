@@ -1,0 +1,10 @@
+#ifndef ICU_H
+#define ICU_H
+
+
+
+uint32 ICU_u32PulseWidth(void);
+
+
+
+#endif

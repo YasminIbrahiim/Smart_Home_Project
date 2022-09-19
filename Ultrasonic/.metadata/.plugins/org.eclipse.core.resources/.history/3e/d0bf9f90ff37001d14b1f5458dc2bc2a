@@ -1,0 +1,31 @@
+#include "STD_Types.h"
+#include "BIT_Math.h"
+#include <avr/io.h>
+#include "ICU.h"
+#include "ICU_priv.h"
+
+
+uint32 u32High, u32Start, u32End;
+
+uint32 ICU_u16PulseWidth(void)
+{
+	TCCR1A = 0;
+	TIFR = (1<<ICF1);  	/* Clear ICF (Input Capture flag)  */
+
+
+
+    TCCR1B = 0xc1;  	/* Rising edge, no prescaler , noise canceler*/
+    while ((TIFR&(1<<ICF1)) == 0);
+    u32Start = ICR1;  		/* Take value of capture register */
+    TIFR = (1<<5);  	/* Clear ICF flag */
+    TCCR1B = 0x81;  	/* Falling edge, no prescaler ,noise canceler*/
+    while ((TIFR&(1<<ICF1)) == 0);
+    u32End = ICR1;  		/* Take value of capture register */
+    TIFR = (1<<ICF1);  	/* Clear ICF flag */
+	TCNT1=0;
+    TCCR1B = 0;  		/* Stop the timer */
+	u32High=u32End-u32Start;
+
+	return u32High;	
+}
+
