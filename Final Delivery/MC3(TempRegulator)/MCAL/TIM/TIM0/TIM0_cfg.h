@@ -1,0 +1,12 @@
+#ifndef TIM0_CFG_H
+#define TIM0_CFG_H
+
+#define TIM0_MODE        TIM0_PWM_PHASE_CORRECT_MODE
+
+
+#define TIM0_PWM_MODE    TIM0_PHC_PWM_CLR_UPCNT
+
+
+#define TIM0_PRESCALLER  TIM0_NO_PRESCALLER
+
+#endif 

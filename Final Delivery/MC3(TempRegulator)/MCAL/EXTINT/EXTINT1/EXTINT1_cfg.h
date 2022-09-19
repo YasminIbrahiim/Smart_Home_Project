@@ -1,0 +1,15 @@
+
+#ifndef EXTINT1_CFG_H
+#define EXTINT1_CFG_H
+/*
+LOW_LEVEL
+IOC
+FALLING_EDGE
+RISING_EDGE
+*/
+
+
+
+#define EXTINT1_SENSE_MODE   LOW_LEVEL
+
+#endif

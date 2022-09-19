@@ -1,0 +1,9 @@
+
+#ifndef TIM2_CFG_H
+#define TIM2_CFG_H
+
+#define TIM2_MODE        TIM2_NORMAL_MODE
+#define TIM2_PRESCALLER  TIM2_PRESCALLER_8
+
+
+#endif

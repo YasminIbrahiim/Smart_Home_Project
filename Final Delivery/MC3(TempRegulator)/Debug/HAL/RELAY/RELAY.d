@@ -1,0 +1,13 @@
+HAL/RELAY/RELAY.o HAL/RELAY/RELAY.o: ../HAL/RELAY/RELAY.c \
+  ../HAL/RELAY/../../LIB/STD_Types.h ../HAL/RELAY/../../MCAL/DIO/DIO.h \
+  ../HAL/RELAY/RELAY.h ../HAL/RELAY/RELAY_cfg.h ../HAL/RELAY/RELAY_priv.h
+
+../HAL/RELAY/../../LIB/STD_Types.h:
+
+../HAL/RELAY/../../MCAL/DIO/DIO.h:
+
+../HAL/RELAY/RELAY.h:
+
+../HAL/RELAY/RELAY_cfg.h:
+
+../HAL/RELAY/RELAY_priv.h:
