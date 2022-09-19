@@ -1,0 +1,8 @@
+#ifndef  TIM2_CFG_H 
+#define  TIM2_CFG_H
+
+#define TIMER2_CLK_SOURCE  SYNC_MODE
+#define TIMER2_MODE        TIM2_NORMAL_MODE
+#define TIMER2_PRESCALER   TIM2_PRESCALER_8
+
+#endif
